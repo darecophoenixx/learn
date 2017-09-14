@@ -30,7 +30,7 @@ x_train = iris2.loc[x_train0]
 x_test = iris2.loc[x_test0]
 
 '''
-用のデータセットを作ります
+lightGBM用のデータセットを作ります
 説明変数側はcls列は必要ないので削除します
 '''
 lgb_train = lgb.Dataset(x_train.drop(['cls'], axis=1), label=x_train.cls)
